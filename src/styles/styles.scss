@@ -8,5 +8,12 @@ $font-logo: 'Kolker Brush', cursive;
 // components
 @import './components/navbar';
 @import './components/logo';
+@import './components/search';
+@import './components/navs';
+@import './components/cart';
 
 
+
+body{
+    background-color: antiquewhite;
+}

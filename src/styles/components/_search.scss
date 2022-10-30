@@ -1,0 +1,37 @@
+.search-container{
+    width: 400px;
+    height: 100%;
+
+    .search-content{
+
+
+        .search{
+            border-radius: 5px;
+
+            &:focus{
+                box-shadow: rgba(160, 160, 160, 0.863) 0px 0px 0px 3px;
+            }
+        }
+
+        .btn{
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.764);
+            transition: all .5s ease;
+            background-color: #c51427;
+
+
+            .imgSearch{
+                width: 25px;
+                height: 25px;
+            }
+
+            &:hover{
+                background-color: #810d18;
+                transition: all .5s ease;
+            }
+            &:focus{
+                box-shadow: rgba(160, 160, 160, 0.863) 0px 0px 0px 3px;
+            }
+        }
+    }
+}

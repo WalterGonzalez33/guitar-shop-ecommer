@@ -1,0 +1,39 @@
+
+.navs-container{
+
+    .nav{
+
+        .nav-item{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            margin: 10px;
+
+            .nav-link{
+                text-decoration: none;
+                color: azure;
+            }
+
+            &::after{
+                content: '';
+                opacity: 0;
+                transition: all .2s ease-in;
+                display: block;
+                width: 100%;
+                text-align: center;
+                bottom: 0;
+                border-bottom: 2px solid white;
+
+            }
+
+            &:hover{
+
+                &::after{
+                    opacity: 1;
+                    transition: all .2s ease-out;
+                }
+
+            }
+        }
+    }
+}
