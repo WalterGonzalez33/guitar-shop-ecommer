@@ -1,3 +1,4 @@
+import Filters from './components/filters/Filters';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <div className="App">
       <header>
         <Navbar/>
+        <Filters/>
       </header>
     </div>
   );
