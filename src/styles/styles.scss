@@ -1,9 +1,15 @@
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $font-logo: 'Kolker Brush', cursive;
+$font-page: 'Roboto', sans-serif;
 
 
+// colors
+
+$color-link: rgb(205, 205, 205);
 
 // components
 @import './components/navbar';
@@ -16,5 +22,6 @@ $font-logo: 'Kolker Brush', cursive;
 
 
 body{
-    background-color: antiquewhite;
+    background-color: rgb(64, 64, 64);
+    font-family: $font-page;
 }
