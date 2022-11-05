@@ -1,8 +1,23 @@
 
+.faBars-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        font-size: 32px;
+        text-align: center;
+        left: 10px;
+
+        z-index: 2;
+    }
+}
 .navs-container{
 
     .nav{
-
         .nav-item{
             display: flex;
             flex-flow: row wrap;
@@ -36,4 +51,63 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width:1200px){
+
+    .faBars-container{
+
+        svg{
+            display: block;
+        }
+    }
+
+    .navs-container{
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        border-bottom-right-radius: 8px;
+        transition: all .5s ease;
+
+        background-color: $color-header;
+        right: 0;
+        width: 100%;
+        height: 30em;
+        padding: 30px;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 94%;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-bottom-right-radius: 8px;
+        }
+
+        .nav{
+
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            width: 100%;
+    
+            .nav-item{
+                width: 100%;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+
+                .nav-link{
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    
 }

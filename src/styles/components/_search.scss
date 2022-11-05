@@ -1,6 +1,7 @@
 .search-container{
     width: 400px;
     height: 100%;
+    margin-left: 50px;
 
     .search-content{
 
@@ -15,9 +16,8 @@
 
         .btn{
             border-radius: 5px;
-            border: 1px solid rgba(0, 0, 0, 0.764);
+            border: none;
             transition: all .5s ease;
-            background-color: #c51427;
 
 
             .imgSearch{
@@ -26,12 +26,18 @@
             }
 
             &:hover{
-                background-color: #810d18;
+                background-color: #00000039;
                 transition: all .5s ease;
             }
-            &:focus{
-                box-shadow: rgba(160, 160, 160, 0.863) 0px 0px 0px 3px;
-            }
         }
+    }
+}
+
+@media screen and (max-width:1200px){
+
+    .search-container{
+
+        max-width: 400px;
+        width: 70%;
     }
 }

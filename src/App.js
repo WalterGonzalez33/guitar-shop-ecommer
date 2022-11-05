@@ -5,11 +5,13 @@ import Navbar from './components/navbar/Navbar';
 function App() {
   return (
     <div className="App">
-      <header>
-        <Navbar/>
+      <div className='header'>
+        <div className='container'>
+          <Navbar/>
+          <ItemListContainer greeting="we hope you enjoy our page"/>
+        </div>
         <Filters/>
-        <ItemListContainer greeting="we hope you enjoy our page"/>
-      </header>
+      </div>
     </div>
   );
 }

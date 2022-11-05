@@ -20,3 +20,11 @@
         height: 90%;
     }
 }
+
+@media screen and (max-width:1200px){
+
+    .cartWidget-container{
+        position: absolute;
+        right: 1px;
+    }
+}

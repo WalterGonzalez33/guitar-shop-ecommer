@@ -1,6 +1,6 @@
 import React from 'react'
 import  swal from 'sweetalert2'
-import fondo from '../../assets/fondoAlert.jpg';
+import fondo from '../../assets/fondoAlert.jpg'
 
 function ItemListContainer({greeting}) {
 
