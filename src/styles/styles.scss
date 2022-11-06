@@ -14,7 +14,7 @@ $font-page: 'Roboto', sans-serif;
 // colors
 
 $color-link: rgb(237, 237, 237);
-$color-header: #cddcf1;  // #1a5454 // #e2ac50 // #5f5f5f
+$color-header: #5f5f5f;  // #1a5454 // #e2ac50 // #5f5f5f
 
 // components
 @import './components/navbar';
@@ -23,6 +23,7 @@ $color-header: #cddcf1;  // #1a5454 // #e2ac50 // #5f5f5f
 @import './components/navs';
 @import './components/cart';
 @import './components/filters';
+@import './components/sectionMain';
 
 
 
