@@ -15,6 +15,7 @@ $font-page: 'Roboto', sans-serif;
 
 $color-link: rgb(237, 237, 237);
 $color-header: #5f5f5f;  // #1a5454 // #e2ac50 // #5f5f5f
+$color-card: rgb(226, 226, 226);
 
 // components
 @import './components/navbar';
@@ -24,11 +25,13 @@ $color-header: #5f5f5f;  // #1a5454 // #e2ac50 // #5f5f5f
 @import './components/cart';
 @import './components/filters';
 @import './components/sectionMain';
+@import './components/cards';
 
 
 
 body{
     font-family: $font-page;
+    background-color: aliceblue;
 
     .header{
         width: 100%;
