@@ -25,9 +25,9 @@ function App() {
 
       <div className='container cont-card'>
         {
-          data.map((e) => {
+          data.map((e) => (
             <Cards key={e.ID} producto={e}/>
-          })
+          ))
         }
       </div>
     </div>

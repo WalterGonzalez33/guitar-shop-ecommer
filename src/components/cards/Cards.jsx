@@ -1,15 +1,14 @@
 import img from '../../assets/imgProducts/guitar1.png'
-import gibson from '../../assets/logosMarcas/gibson.png'
 
-const Cards = ({producto}) => {
+const Cards = ({ producto }) => {
+
   return (
     <div className="card-container">
-
         <div className="card-content">
 
             <div className='card-img-container'>
 
-              <img className='card-img' src={img} alt="les paul" />
+              <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="les paul" />
 
             </div>
 
@@ -22,7 +21,7 @@ const Cards = ({producto}) => {
                 </div>
 
                 <div className='card-brand-container'>
-                  <img src={gibson} alt="gibson" />
+                  <img src={producto.marca} alt="" />
                 </div>
 
                 <div className='card-price-container'>

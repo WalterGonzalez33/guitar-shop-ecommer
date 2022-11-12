@@ -13,8 +13,8 @@ $font-page: 'Roboto', sans-serif;
 
 // colors
 
-$color-link: rgb(237, 237, 237);
-$color-header: #5f5f5f;  // #1a5454 // #e2ac50 // #5f5f5f
+$color-link: rgb(255, 255, 255);
+$color-header: #1a5454;  // #1a5454 // #e2ac50 // #5f5f5f // #fff159
 $color-card: rgb(226, 226, 226);
 
 // components
@@ -31,7 +31,7 @@ $color-card: rgb(226, 226, 226);
 
 body{
     font-family: $font-page;
-    background-color: aliceblue;
+    background-color:rgb(229, 248, 248);
 
     .header{
         width: 100%;
