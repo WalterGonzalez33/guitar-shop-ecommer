@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { FaBars, FaArrowLeft } from "react-icons/fa";
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navs() {
 
@@ -32,13 +33,13 @@ function Navs() {
             <div className='navs-container'>
                 <ul className="nav justify-content-end">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">HOME</a>
+                        <NavLink to={'/'} activeClassName={'active'} className="nav-link">HOME</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">PRODUCTS</a>
+                        <NavLink to={'/products'} activeClassName={'active'} className="nav-link">PRODUCTS</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">CONTACT</a>
+                        <NavLink to={'contact'} activeClassName={'active'} className="nav-link">CONTACT</NavLink>
                     </li>
                 </ul>
             </div>

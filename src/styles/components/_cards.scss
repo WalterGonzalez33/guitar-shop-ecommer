@@ -3,9 +3,8 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-
+    background-color: $color-Itemcontainer;
     padding: 20px;
-    background-color: $color-header;
 }
 
 .card-container{
@@ -58,6 +57,10 @@
                 font-size: 22px;
                 font-family: $font-page;
                 text-align: center;
+
+                .card-name{
+                    text-decoration: none;
+                }
             }
             .card-brand-container{
 

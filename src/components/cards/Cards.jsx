@@ -1,40 +1,41 @@
+import { Link } from 'react-router-dom'
 import img from '../../assets/imgProducts/guitar1.png'
 
 const Cards = ({ producto }) => {
 
   return (
     <div className="card-container">
-        <div className="card-content">
+      <Link to={'/detail'} className="card-content">
 
-            <div className='card-img-container'>
+        <div className='card-img-container'>
 
-              <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="les paul" />
+          <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="les paul" />
 
-            </div>
+        </div>
 
             <div className='card-data'>
 
-                <div className='card-name-container'>
+              <div className='card-name-container'>
 
-                  <span className='card-name'>{producto.name}</span>
+                <span className='card-name'>{producto.name}</span>
 
-                </div>
+              </div>
 
-                <div className='card-brand-container'>
-                  <img src={producto.marca} alt="" />
-                </div>
+              <div className='card-brand-container'>
+                <img src={producto.marca} alt="" />
+              </div>
 
-                <div className='card-price-container'>
+              <div className='card-price-container'>
 
-                  <span className='card-price'>${producto.price}</span>
+                <span className='card-price'>${producto.price}</span>
 
-                </div>
+              </div>
             </div>
 
             <div className='card-button-container'>
                <button className='card-button'>BUY</button>
             </div>
-        </div>
+      </Link>
     </div>
   )
 }

@@ -6,12 +6,16 @@ import Search from '../search/Search'
 
 function Navbar() {
   return (
-    <nav className='navbar-container'>
-        <Logo/>
-        <Search/>
-        <Navs/>
-        <CartWidget/>
-    </nav>
+    <header className="header">
+      <div className="container">
+        <nav className='navbar-container'>
+          <Logo/>
+          <Search/>
+          <Navs/>
+          <CartWidget/>
+        </nav>
+      </div>
+    </header>
   )
 }
 

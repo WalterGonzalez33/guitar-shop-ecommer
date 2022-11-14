@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { FaArrowCircleDown,FaArrowCircleUp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Filters() {
 
@@ -35,23 +36,23 @@ function Filters() {
             <ul className='filters'>
 
                 <li className='filter-item'>
-                    <a className='filter-link' href='#'>Les Paul</a>
+                    <Link to={'products/les paul'} className='filter-link' href='#'>Les Paul</Link>
                 </li>
 
                 <li className='filter-item'>
-                    <a className='filter-link' href='#'>Stratocaster</a>
+                    <Link to={'products/stratocaster'} className='filter-link' href='#'>Stratocaster</Link>
                 </li>
 
                 <li className='filter-item'>
-                    <a className='filter-link' href='#'>Telecaster</a>
+                    <Link to={'products/telecaster'} className='filter-link' href='#'>Telecaster</Link>
                 </li>
 
                 <li className='filter-item'>
-                    <a className='filter-link' href='#'>Flying V</a>
+                    <Link to={'products/flying v'} className='filter-link' href='#'>Flying V</Link>
                 </li>
                 
                 <li className='filter-item'>
-                    <a className='filter-link' href='#'>Explorer</a>
+                    <Link to={'products/explorer'} className='filter-link' href='#'>Explorer</Link>
                 </li>
             </ul>
         </div>

@@ -27,6 +27,10 @@
             .nav-link{
                 text-decoration: none;
                 color: $color-link;
+                &.active{
+
+                    color:aqua
+                }
             }
 
             &::after{
@@ -37,7 +41,7 @@
                 width: 100%;
                 text-align: center;
                 bottom: 0;
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.602);
 
             }
 
