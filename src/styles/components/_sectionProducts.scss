@@ -3,5 +3,7 @@
     background-image: url('../../assets/fondoProducts.jpg');
     background-size:cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     position: sticky;
+    top:0;
 }

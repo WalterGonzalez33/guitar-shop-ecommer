@@ -3,6 +3,7 @@ import fender from '../assets/logosMarcas/fender.png'
 import cort from '../assets/logosMarcas/cort.png'
 import ibanez from '../assets/logosMarcas/ibanez.png'
 import epiphone from '../assets/logosMarcas/epiphone.png'
+import ltd from '../assets/logosMarcas/ltd.png'
 
 
 // img product
@@ -15,6 +16,10 @@ import CortG110 from '../assets/imgProducts/CortG110.png'
 import epiphoneSl from '../assets/imgProducts/epiphoneSl.png'
 import TEbony from '../assets/imgProducts/TEbony.png'
 import AgedCherry from '../assets/imgProducts/GibsonAgedCherry.png'
+import LTDEC256FM from '../assets/imgProducts/LTDEC256FM.png'
+import TE200RTSB from '../assets/imgProducts/TE200RTSB.png'
+import VX2X from '../assets/imgProducts/VX2X.png'
+import IbanezPink from '../assets/imgProducts/IbanezPink.png'
 
 export const Data = [
 
@@ -22,6 +27,7 @@ export const Data = [
         ID:1,
         name: 'Les Paul Standard 50s Faded',
         price: 3500,
+        stock: 2,
         marca:gibson ,
         modelo: 'les paul',
         imgProduct:gibsonLesPaul,
@@ -31,6 +37,7 @@ export const Data = [
         ID:2,
         name: 'fender floyd rose',
         price: 2000,
+        stock: 6,
         marca:fender,
         modelo: 'stratocaster',
         imgProduct: fenderfenderfloydrose,
@@ -40,6 +47,7 @@ export const Data = [
         ID:3,
         name: 'Cort VX 2V BK',
         price: 4000,
+        stock: 8,
         marca:cort,
         modelo: 'flying v',
         imgProduct:CortVX2VBK,
@@ -49,6 +57,7 @@ export const Data = [
         ID:4,
         name: 'IBANEZ AZS2200-BK',
         price: 3900,
+        stock: 9,
         marca:ibanez,
         modelo: 'telecaster',
         imgProduct:IBANEZAZS2200BK,
@@ -58,6 +67,7 @@ export const Data = [
         ID:5,
         name: 'Cort G110',
         price: 1500,
+        stock:4,
         marca:cort,
         modelo: 'stratocaster',
         imgProduct:CortG110,
@@ -67,6 +77,7 @@ export const Data = [
         ID:6,
         name:'epiphone SL',
         price: 2000,
+        stock: 5,
         marca:epiphone,
         modelo:'les paul',
         imgProduct:epiphoneSl,
@@ -76,6 +87,7 @@ export const Data = [
         ID:7,
         name: 'Gibson Explorer T Ebony',
         price: 4000,
+        stock: 12,
         marca:gibson,
         modelo: 'explorer',
         imgProduct:TEbony,
@@ -85,10 +97,50 @@ export const Data = [
         ID:8,
         name: 'Gibson USA Aged Cherry',
         price: 3200,
+        stock: 2,
         marca:gibson,
         modelo: 'flying v',
         imgProduct:AgedCherry,
         descripcion:'The Flying V is a testament to Gibson s daring approach to design and innovation. Introduced back in the 1950`s the Flying V was a bold leap for Gibson into the world of contemporary design and sci-fi inspired modernism, a `High-Class Heavy Metal` machine.  The 2018 Flying V`s body is constructed of solid mahogany giving it generous resonance and deep low-end. The Neck is also mahogany which is a great joy to many Gibson fans (The same all-mahogany build can be found on many of the Gibson 2018 range). Scale length rocks in at just under 25 inches with a fingerboard top material of Torrefied Granadillo. The fingerboard material is a straight grained Cuban wood hailed as "the wood that sings", to the trained ear, it gives the Flying V a slightly brighter tone than Rosewood.'
+    },
+    {
+        ID:9,
+        name: 'LTD EC-256FM Cobalt Blue',
+        price: 500,
+        stock: 3,
+        marca:ltd,
+        modelo: 'les paul',
+        imgProduct:LTDEC256FM,
+        descripcion:' La EC-256FM ofrece características que normalmente se asocian con guitarras de alta gama. Esta guitarra cuenta con las aclamadas pastillas de diseño humbucking ESP LH-150 que ofrecen un excelente tono con división de bobina controlada por un interruptor Push Pull en el potenciómetro del tono.'
+    },
+    {
+        ID:10,
+        name: 'LTD TE200R-TSB',
+        price: 900,
+        stock: 7,
+        marca:ltd,
+        modelo: 'telecaster',
+        imgProduct:TE200RTSB,
+        descripcion:'Estilo clásico, rendimiento moderno y tonos versátiles. ESP diseñado humbuckers ideal para el rock y el metal, El mástil liso le permite entregar notas rápidas y curvas fuertes. Construida como una guitarra polifacética adecuada para cada concierto. Cuando se fundó ESP en 1975, su reclamo original de fama fue tomar las guitarras existentes y mejorarlas, con cuellos y componentes modificados que aumentaron su capacidad de interpretación y calidad sonora. Hoy, ESP todavía se enorgullece de ofrecer formas de guitarra clásicas que se sienten y suenan mejor de lo que cabría esperar, especialmente a los precios asequibles en nuestra serie LTD. Disponible en varios acabados, el TE-200 es una gran guitarra para rock, rock clásico, country, blues y más. Cuenta con un cuerpo de caoba y un mástil de arce rápido y delgado en forma de U con diapasón de arce de 24 trastes. Las pastillas en el TE-200 son un conjunto de ESP diseñado LH-150, un humbucker bueno, de alto rendimiento que es versátil en tonos, lo que hace que el TE-200 sea una excelente guitarra versátil para cada concierto.'
+    },
+    {
+        ID:11,
+        name: 'CORT VX 2X ',
+        price: 1000,
+        stock: 1,
+        marca:cort,
+        modelo: 'explorer',
+        imgProduct:VX2X,
+    },
+    {
+        ID:12,
+        name: 'Steve Vai Jem Jr Pink',
+        price: 4300,
+        stock: 1,
+        marca:ibanez,
+        modelo: 'stratocaster',
+        imgProduct:IbanezPink,
+        descripcion: 'Guitarra Eléctrica Ibanez Jemjrsp Pk Steve Vai Jem Jr Pink.. Pasión y Guerra. Ambas son abundantes en el suministro de Ibanez JEM El joven Steve Vai. Diseñado según los exigentes estándares del legendario guitarrista Steve Vai, el JEM Junior presenta sus signature toques estéticos, como el ergonómico mango del cuerpo "Monkey grip", y la deslumbrante incrustación en el diapasón del "árbol de la vida". El JEM original de Vai fue decisivo para popularizar el sistema de trémolo de bloqueo en los años 80, y el puente de trémolo de doble bloqueo del JEMJR te hará saltar en picado a gusto, con una afinación sólida como una roca. El JEM cuenta con un versátil conjunto de pastillas HSH Ibanez Infinity. Desde los lametazos de plomo líquido hasta el powerchord punch, coinciden con el flexible diapasón de Jatoba para una detallada respuesta de alta gama con mucho peso de rango medio. El mástil de arce Wizard III de JEM Jr. fue diseñado teniendo en cuenta a virtuosos como Vai y Joe Satriani, y completa una guitarra hecha para la velocidad. No hay ilusiones reales aquí - la JEM Junior es una verdadera guitarra Flex-Able que está construida para agarrarte por los oídos y los ojos.'
     }
     
 ]

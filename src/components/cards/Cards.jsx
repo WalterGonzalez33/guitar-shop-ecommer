@@ -5,7 +5,7 @@ const Cards = ({ producto }) => {
 
   return (
     <div className="card-container">
-      <Link to={'/detail'} className="card-content">
+      <Link to={`/detail/${producto.ID}`} className="card-content">
 
         <div className='card-img-container'>
 

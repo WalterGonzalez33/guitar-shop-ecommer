@@ -1,5 +1,5 @@
 import React from 'react'
-import imgSearch from '../../assets/search.png'
+import { HiSearch } from "react-icons/hi";
 
 function Search() {
   return (
@@ -7,7 +7,7 @@ function Search() {
         <form className="search-content d-flex" role="search">
             <input className="search form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit">
-                <img className='imgSearch' src={imgSearch} alt="search" />
+                <HiSearch className="svgSearch"/>
             </button>
         </form>
     </div>

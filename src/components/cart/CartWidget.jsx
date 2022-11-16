@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Cards from '../cards/Cards'
 import card from '../../assets/carrito-de-compras.png'
 import { useEffect } from 'react';
+import { FiShoppingCart } from 'react-icons/fi'
 
 
 function CartWidget() {
@@ -12,7 +13,8 @@ function CartWidget() {
   return (
     <div className='cartWidget-container'>
         
-        <img className='imgCart' src={card} alt="card" />
+        {/* <img className='imgCart' src={card} alt="card" /> */}
+        <FiShoppingCart className='svgCart'/>
     
     </div>
   )

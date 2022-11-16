@@ -30,6 +30,8 @@ $color-Itemcontainer: #1b1b26;
 @import './components/filters';
 @import './components/sectionMain';
 @import './components/cards';
+@import './components/itemDetail';
+@import './components/similProduct';
 
 
 
@@ -38,5 +40,8 @@ body{
     background-color:$color-header;
     padding: 0;
     margin: 0;
-    text-decoration: none;
+
+    *{
+        text-decoration: none;
+    }
 }

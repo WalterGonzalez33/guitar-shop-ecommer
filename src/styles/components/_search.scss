@@ -1,7 +1,6 @@
 .search-container{
     width: 400px;
     height: 100%;
-    margin-left: 50px;
 
     .search-content{
 
@@ -20,9 +19,10 @@
             transition: all .5s ease;
 
 
-            .imgSearch{
+            .svgSearch{
                 width: 25px;
                 height: 25px;
+                color: white;
             }
 
             &:hover{

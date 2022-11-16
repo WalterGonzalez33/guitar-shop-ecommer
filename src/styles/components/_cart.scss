@@ -1,23 +1,25 @@
 
 .cartWidget-container{
 
-    margin-right: 10px;
     cursor: pointer;
     width: 62px;
     height: 62px;
     display: flex;
     flex-direction: row wrap;
     align-items: center;
-    padding: 8px;
+    justify-content: center;
+    padding: 5px;
 
     &:hover{
         background-color: rgba(0, 0, 0, 0.158);
         border-radius: 50%;
     }
 
-    .imgCart{
-        width: 90%;
-        height: 90%;
+    .svgCart{
+        width: 60%;
+        height: 60%;
+        color: white;
+
     }
 }
 

@@ -3,13 +3,15 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    background-color: $color-Itemcontainer;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    min-height: 900px;
 }
 
 .card-container{
-    width: 280px;
-    height: 600px;
+    width: 260px;
+    height: 580px;
     background-color: aliceblue;
     padding: 10px;
     border-radius: 13px;
@@ -57,11 +59,16 @@
                 font-size: 22px;
                 font-family: $font-page;
                 text-align: center;
+                text-decoration: none;
 
-                .card-name{
-                    text-decoration: none;
-                }
             }
+
+            .card-price-container{
+                color: black;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
             .card-brand-container{
 
                 width: 90px;
