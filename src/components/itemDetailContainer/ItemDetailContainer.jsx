@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
 
 
             
-        } ,2000)
+        } ,0)
     })
 
 

@@ -10,8 +10,8 @@
 }
 
 .card-container{
-    width: 260px;
-    height: 580px;
+    width: 250px;
+    height: 570px;
     background-color: aliceblue;
     padding: 10px;
     border-radius: 13px;
@@ -98,6 +98,22 @@
                     background-color: aliceblue;
                 }
             }
+        }
+
+        .card-offStock{
+            background-color: red;
+            color: white;
+            text-align: center;
+            height: 28px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+
+            p{
+                margin: 0;
+                padding: 7px;
+            }
+
         }
     }
 

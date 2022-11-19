@@ -32,9 +32,15 @@ const Cards = ({ producto }) => {
               </div>
             </div>
 
-            <div className='card-button-container'>
+      {
+        producto.stock != 0
+          ? <div className='card-button-container'>
                <button className='card-button'>BUY</button>
             </div>
+          : <div className="card-offStock">
+              <p>out of stock</p>
+            </div>
+      }
       </Link>
     </div>
   )

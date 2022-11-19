@@ -1,5 +1,5 @@
 import React from 'react'
-import CartWidget from '../cart/CartWidget'
+import CartWidget from '../cartWidget/CartWidget'
 import Logo from '../logo/Logo'
 import Navs from '../navs/Navs'
 import Search from '../search/Search'

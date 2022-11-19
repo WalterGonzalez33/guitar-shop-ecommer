@@ -1,9 +1,26 @@
 .product-similar-container{
     padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 
     .similar-text-container{
         font-size: 20px;
         text-align: center;
         
+    }
+}
+
+@media screen and (max-width:1000px){
+    .product-similar-container{
+        width: 100%;
+    
+        .similar-text-container{
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            
+        }
     }
 }
