@@ -1,7 +1,7 @@
 
 .detail-container{
 
-    background-image: url('../../assets/fondoProducts.jpg');
+    background-color: aliceblue;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,9 +14,9 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
+        background-color: rgb(211, 216, 222);
         width: 100%;
         min-height: 850px;
-        background-color: aqua;
         display: flex;
         padding: 20px;
 
@@ -63,19 +63,23 @@
         
                     .detailName-container{
                         padding: 8px;
-                        color: black;
+                        color: rgb(27, 27, 27);
                         font-size: 28px;
+                        font-weight: 600;
+                        font-family: $font-page;
         
                     }
     
                     .detail-price-container{
                         padding: 5px;
                         font-size: 25px;
+                        font-weight: 600;
                     }
     
                     .detailStock-container{
                         padding: 8px;
                         font-size: 20px;
+                        font-weight: 700;
                     }
     
                     .detail-brand{
@@ -86,6 +90,56 @@
                         .detailBrandImg{
                             width: 100%;
                             height: 100%;
+                        }
+                    }
+
+
+                    .cant-product-container{
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: space-evenly;
+
+                        .cantidad-txt{
+                            font-size: 18px;
+                            font-family: $font-page;
+                            font-weight: 600;
+                        }
+
+                        .selec-cant-item-container{
+                            width: 65px;
+                            height: 30px;
+                            background-color: rgba(0, 0, 0, 0.2);
+                            margin: 8px;
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .buttom-cant{
+                                width: 20px;
+                                height: 100%;
+                                border: none;
+                                background-color: rgba(0, 0, 0, 0.802);
+                                color: aliceblue;
+                                
+                                .button-less{
+                                    border-bottom-left-radius: 10px;
+                                    border-top-left-radius: 10px;
+                                }
+                                .button-plus{
+                                    border-bottom-right-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                }
+                            }
+                            .cant-item{
+                                color: aliceblue;
+                            }
+                        }
+
+                        .alertMaxCant-container{
+                            color: rgb(72, 9, 9);
+                            font-weight: 800;
                         }
                     }
     
@@ -105,6 +159,24 @@
                                 color: black;
                                 background-color: aliceblue;
                             }
+                        }
+                    }
+
+                    .itemDetail-offStock{
+                        padding: 8px;
+                        margin-top: 20px;
+                        background-color: red;
+                        color: white;
+                        text-align: center;
+                        height: 28px;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        cursor: context-menu;
+            
+                        p{
+                            margin: 0;
+                            padding: 7px;
                         }
                     }
     
@@ -148,15 +220,31 @@
         }
     }
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1400px){
 
     .detail-container{
 
         .container{
             flex-wrap: nowrap;
 
+            .itemDetail-container{
+
+                .detailData{
+                    width: 100%;
+                }
+
+                .detail-content{
+                    .detailData{
+                        width: 250px;
+                        align-items: center;
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
+
+
 
 }
 @media screen and (max-width:1000px){

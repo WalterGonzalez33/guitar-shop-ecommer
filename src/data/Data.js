@@ -25,7 +25,7 @@ export const Data = [
 
     {
         ID:1,
-        name: 'Les Paul Standard 50s Faded',
+        name: 'Les Paul Standard 50s',
         price: 3500,
         stock: 2,
         marca:gibson ,

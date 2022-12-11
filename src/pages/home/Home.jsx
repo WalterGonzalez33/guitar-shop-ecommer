@@ -1,7 +1,5 @@
 import React from 'react'
-import Filters from '../../components/filters/Filters';
-import ItemListContainer from '../../components/itemListContainer/ItemListContainer';
-import Navbar from '../../components/navbar/Navbar';
+import DataCarouselHome from '../../components/dataCarouselHome/DataCarouselHome';
 import SectionMain from '../../components/sectionMain/SetionMain';
 
 const Home = () => {
@@ -12,7 +10,7 @@ const Home = () => {
       </section>
 
       <div className="home">
-        <ItemListContainer/>
+        <DataCarouselHome/>
       </div>
     </div>
   )

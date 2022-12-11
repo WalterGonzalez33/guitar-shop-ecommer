@@ -2,12 +2,16 @@
 import { Link } from 'react-router-dom'
 import SimilarProducts from '../similarProducts/SimilarProducts'
 import Pagos from '../../assets/Pagos.png'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { useEffect } from 'react'
+import SetQuantity from '../setQuantity/SetQuantity'
 
 const ItemDetail = ({product}) => {
 
- const { cart, addToCart } = useContext(CartContext)
+ const { getElementExist, addToCart } = useContext(CartContext)
+
+ const [ cantProduct, setCantProduct ] = useState(1)
 
   return (
     <div className="container itemDetail">
@@ -28,6 +32,10 @@ const ItemDetail = ({product}) => {
               <h3 className='detail-name'>{product[0].name}</h3>
             </div>
 
+            <div className="detail-brand">
+              <img className='detailBrandImg' src={product[0].marca} alt="marcha" />
+            </div>
+
             <div className="detail-price-container">
               <span className='detail-price'>$ {product[0].price}</span>
             </div>
@@ -36,18 +44,35 @@ const ItemDetail = ({product}) => {
               <span className="detailStock">STOCK: {product[0].stock}</span>
             </div>
 
-            <div className="detail-brand">
-              <img className='detailBrandImg' src={product[0].marca} alt="marcha" />
-            </div>
+            {
+              getElementExist(product[0].ID)
+                ? <></>
+                : <SetQuantity stock={product[0].stock} state={cantProduct} setState={setCantProduct}/>
+            }
+            
 
-            <Link to={'/cart'} onClick={() => {
 
-              addToCart(product[0], 1)
-              console.log(cart.length);
+            {/* // funcion para aniadir al carrito... f no tengo enie */}
 
-            }} className='detail-button-container'>
-              <button className='detail-button'>add cart</button>
-            </Link>
+          {
+            product[0].stock != 0
+              ? getElementExist(product[0].ID)
+
+                  ? <Link to={'/cart'} className="exist-product-container detail-button-container">
+                      <button className='detail-button'>product already in cart</button>
+                    </Link>
+                  : <Link to={'/cart'} onClick={() => {
+
+                      { addToCart(product[0], cantProduct)}
+        
+                    }}className='detail-button-container'>
+                        <button className='detail-button'>add cart</button>
+                    </Link>
+                
+              : <div className="itemDetail-offStock">
+                  <p>out of stock</p>
+                </div>
+          }
 
           </div>
         </div>
@@ -63,6 +88,7 @@ const ItemDetail = ({product}) => {
 
       <SimilarProducts id={product[0].ID} modelo={product[0].modelo}/>
     </div>
+    
   )
 }
 

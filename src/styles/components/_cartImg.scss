@@ -1,0 +1,25 @@
+
+.img-cart-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 20 20;
+
+    .img-cart{
+        width: 150px;
+        height: 150px;
+
+        border-radius: 50%;
+        margin: 20px;
+    }
+
+    .title-cart{
+        width: 100%;
+        text-align:center ;
+        font-size: 30px;
+        color: aliceblue;
+        font-family: $font-page;
+    }
+}

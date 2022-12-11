@@ -9,7 +9,7 @@ const Cards = ({ producto }) => {
 
         <div className='card-img-container'>
 
-          <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="les paul" />
+          <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="guitar" />
 
         </div>
 

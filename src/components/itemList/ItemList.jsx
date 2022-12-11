@@ -19,10 +19,7 @@ const ItemList = () => {
             resolve(dataFiltrada)
           }else{
             resolve(Data)
-          }
-
-
-            
+          }  
         } ,0)
     })
 

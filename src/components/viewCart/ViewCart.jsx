@@ -7,9 +7,7 @@ const ViewCart = ({dataProduct}) => {
   
 
   return (
-    <div className='viewCart-container container'>
-      <ItemCart producto={dataProduct}/>
-    </div>
+    <ItemCart producto={dataProduct}/>
   )
 }
 

@@ -33,13 +33,13 @@ function Navs() {
             <div className='navs-container'>
                 <ul className="nav justify-content-end">
                     <li className="nav-item">
-                        <NavLink to={'/'} activeClassName={'active'} className="nav-link">HOME</NavLink>
+                        <NavLink to={'/'}  className="nav-link">HOME</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to={'/products'} activeClassName={'active'} className="nav-link">PRODUCTS</NavLink>
+                        <NavLink to={'/products'} className="nav-link">PRODUCTS</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to={'contact'} activeClassName={'active'} className="nav-link">CONTACT</NavLink>
+                        <NavLink to={'contact'} className="nav-link">CONTACT</NavLink>
                     </li>
                 </ul>
             </div>
