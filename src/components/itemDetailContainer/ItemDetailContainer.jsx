@@ -1,50 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../itemDetail/ItemDetail'
-import { Data } from '../../data/Data'
 import Loading from '../loading/Loading';
+import {doc, getDoc, getFirestore } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [product, setProduct] = useState()
+    const [loading, setLoading] = useState(true)
+
 
     const { productId } = useParams()
 
-    const getData = new Promise((resolve, reject) => {
+    const getProduct = () => {
 
-        setTimeout(() => {
+      const db = getFirestore();
+      const query = doc(db, 'Products', productId)
 
-          if(productId){
-            const getProduct = Data.filter((p) => {
-              return p.ID == productId
-            })
-            resolve(getProduct)
-          }else{
-            resolve(Data)
-          }
+      getDoc(query)
+        .then((res) => {
+          setProduct({id: res.id, ...res.data()})
+          setLoading(false)
+        }
+        )
+        .catch(err => console.log(err))
 
+    }
 
-            
-        } ,2000)
-    })
 
 
     useEffect(() => {
-      getData
-        .then(res => {
-          setData(res)
-          setLoading(!loading)
-        })
-        .catch( e => console.log(e))
+      getProduct()
     } ,[productId])
     
   return (
     <div className='detail-container'>
       
-        { loading && <ItemDetail key={data.ID} product={data}/> }
+        { loading && <Loading/>}
 
-        { loading === false && <Loading/> }
+        { product && <ItemDetail key={product.id} product={product}/> }
     </div>
   )
 }

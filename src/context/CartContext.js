@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { createContext, useState } from "react"
 
+import { getFirestore, getDocs, doc, collection, where, query } from 'firebase/firestore'
+
 export const CartContext = createContext([]);
 
 // let cartStorage = (toCart) => {
@@ -11,6 +13,9 @@ export const CartContext = createContext([]);
 const CartProvider = ({children}) => {
 
     const [ cart, setCart ] = useState([]);
+    const [ data, setData ] = useState([]);
+    const [ activeData, setActiveData ] = useState(false);
+    const [ searchConten, setSearchConten ] = useState('')
 
 
     // esta funcion agrega todos los elementos que ya estan en el carrito y le agrega el nuevo selecionado // 
@@ -24,7 +29,7 @@ const CartProvider = ({children}) => {
 
     const getElementExist = (id) => {
       const getExist = cart.find(( item ) => {
-        return item.ID === id
+        return item.id === id
       })
       
       if(getExist){
@@ -44,11 +49,30 @@ const CartProvider = ({children}) => {
 
       setCart(removeProduct)
     }
+
+   // funcion que obtiene la data de firebase
+    const getData = () => {
+      const db = getFirestore();
+
+      const querySnapshot = collection(db, 'Products')
+      getDocs(querySnapshot)
+        .then((res) => {
+          const data = res.docs.map(( item ) => {
+            return {id: item.id, ...item.data()}
+          })
+
+          setData(data)
+
+        })
+        .catch(err => console.log(err))
+    }
+
     useEffect(() => {
-    },[ cart ]);
+      getData()
+    },[activeData]);
 
     return(
-        <CartContext.Provider value={{cart, addToCart, removeToCart, getElementExist}}>
+        <CartContext.Provider value={{cart,data, setActiveData,setSearchConten,searchConten, addToCart, removeToCart, getElementExist}}>
             { children }
         </CartContext.Provider>
     )

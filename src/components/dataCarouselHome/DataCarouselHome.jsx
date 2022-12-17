@@ -1,30 +1,33 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Data } from '../../data/Data'
 import CarouselHome from '../carouselHome/CarouselHome'
 import Loading from '../loading/Loading'
 
+import { CartContext } from '../../context/CartContext'
+import { useContext } from 'react'
+
 const DataCarouselHome = () => {
+
+  const { data } = useContext(CartContext)
 
   const [ dataCarousel , setDataCarousel ] = useState([])
   const [ loading, setLoading ] = useState(true)
 
-  const getData = new Promise((res, rej) => {
-    setTimeout(() => {
-      res(Data)
-    }, 1000)
-  })
+
+  const getData = () => {
+    
+    if(data){
+      setDataCarousel(data)
+      setLoading(false)
+    }else{
+      console.log('no data')
+    }
+  }
 
   useEffect(() => {
-    getData
-      .then(res =>{
-        setDataCarousel(res)
-        setLoading(!loading)
-      })
-      .catch(res => console.log(res))
-
-  }, [dataCarousel])
+    getData()
+  }, [dataCarousel, []])
 
 
   return (

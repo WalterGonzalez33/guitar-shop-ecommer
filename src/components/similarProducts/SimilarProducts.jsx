@@ -1,27 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Data } from '../../data/Data'
 import Cards from '../cards/Cards'
+import { CartContext } from '../../context/CartContext'
+import { useParams } from 'react-router-dom'
 
-const SimilarProducts = ({ modelo,id }) => {
+const SimilarProducts = ({ model,id }) => {
 
-    const [ data, setData ] = useState()
+    const [ similData, setSimilData ] = useState()
+
+    const { data } = useContext(CartContext)
+    const { productId } = useParams()
 
     const getSimilProduct = () => {
-        const similProduct = Data.filter((product) => {
-          return product.modelo === modelo
+        const similProduct = data.filter((product) => {
+          return product.model === model
         })
 
         const comprovationSimil = similProduct.filter((product) => {
-          return product.ID != id
+          return product.id != id
         })
 
-        return comprovationSimil
+        setSimilData(comprovationSimil)
     }
     useEffect(() => {
-      setData(getSimilProduct())
-    },[id])
+      getSimilProduct()
+    },[productId])
     
   return (
     <div>
@@ -33,8 +37,8 @@ const SimilarProducts = ({ modelo,id }) => {
 
             <div className="similar-pruduct-container">
                 {
-                    data
-                        ? data.map(e => <Cards key={e.ID} producto={e}/>)
+                    similData
+                        ? similData.map(e => <Cards key={e.id} producto={e}/>)
                         : <></>
                 }
             </div>

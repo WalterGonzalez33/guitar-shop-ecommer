@@ -17,7 +17,7 @@ const CarouselHome = ({ products }) => {
   const getItemMovil = () => {
     const cardItem = products.map((item) => {
       return (
-            <Carousel.Item key={item.ID}>
+            <Carousel.Item key={item.id}>
               {<div className='carousel-item-container'>
                 <Cards producto={item}/>
               </div>}
@@ -30,7 +30,7 @@ const CarouselHome = ({ products }) => {
   // funsion de la vista para dispositivos mas grandes
   const getItemDesk = () => {
     const cardItem = products.map((item, index)=>{
-      return index < 4 ? <Cards key={item.ID} producto={item}/> : <></>
+      return index < 4 ? <Cards key={item.id} producto={item}/> : <></>
     })
     return cardItem
   }
@@ -47,15 +47,15 @@ const CarouselHome = ({ products }) => {
 
 
   return (
-    <div className="home-products container">
+    <div className="home-products">
 
       
-      {width <= 1000 &&  <Carousel variant="dark" indicators={false}>
-        { width <= 1000 && getItemMovil() }
+      {width <= 1200 &&  <Carousel variant="dark" indicators={false}>
+        { width <= 1200 && getItemMovil() }
       </Carousel>}
 
       <div className="item-card row" >
-        { width > 1000 && getItemDesk() }
+        { width > 1200 && getItemDesk() }
       </div>
     </div>
   )

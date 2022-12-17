@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-import Cards from "../../components/cards/Cards"
+
 import ItemDetailContainer from "../../components/itemDetailContainer/ItemDetailContainer"
 
 const DetailProduct = () => {

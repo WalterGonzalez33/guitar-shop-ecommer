@@ -5,7 +5,7 @@ const Loading = () => {
     <div className="loading">
         <div className='container'>
             <div className="loading-container">
-                <Spinner animation="grow" variant="info" />
+                <Spinner animation="grow" />
             </div>
         </div>
     </div>

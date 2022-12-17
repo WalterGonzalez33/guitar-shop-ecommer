@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom'
-import img from '../../assets/imgProducts/guitar1.png'
 
 const Cards = ({ producto }) => {
 
   return (
     <div className="card-container">
-      <Link to={`/detail/${producto.ID}`} className="card-content">
+      <Link to={`../detail/${producto.id}`} className="card-content">
 
         <div className='card-img-container'>
 
-          <img className='card-img' src={producto.imgProduct ? producto.imgProduct : img} alt="guitar" />
+          <img className='card-img' src={producto.imgId ? `../imgProducts/${producto.imgId}` : '../imgProducts/guitar1.png'} alt="guitar" />
 
         </div>
 
@@ -17,12 +16,12 @@ const Cards = ({ producto }) => {
 
               <div className='card-name-container'>
 
-                <span className='card-name'>{producto.name}</span>
+                <span className='card-name'>{producto.title}</span>
 
               </div>
 
               <div className='card-brand-container'>
-                <img src={producto.marca} alt="" />
+                <img src={`../logosMarcas/${producto.breand}`} alt="" />
               </div>
 
               <div className='card-price-container'>

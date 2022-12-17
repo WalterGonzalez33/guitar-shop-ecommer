@@ -1,6 +1,22 @@
 .home{
-    background-color: aliceblue;
+    background-image: url('../../assets/fondoHome.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    position: sticky;
+    background-attachment: fixed;
+
+    .title-carousel{
+        color: rgb(230, 229, 229);
+        font-size: 40px;
+        font-family: $font-page;
+        text-align: center;
+        padding: 10px;
+        text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    }
+}
+@media screen and (max-width:1200px) {
+
+    .home{
+        background-image: url('../../assets/fondoProducts.jpg');
+       
+    }
 }

@@ -12,14 +12,14 @@
 .card-container{
     width: 250px;
     height: 570px;
-    background-color: aliceblue;
+    background-color: #55545ef3;
     padding: 10px;
     border-radius: 13px;
     margin: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     transition: all 1s ease;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
 
     &:hover{
         transition: all 1s ease;
@@ -55,7 +55,7 @@
             justify-content: space-around;
 
             .card-name-container{
-                color: black;
+                color: $color-text;
                 font-size: 22px;
                 font-family: $font-page;
                 text-align: center;
@@ -64,7 +64,7 @@
             }
 
             .card-price-container{
-                color: black;
+                color: $color-text;
                 font-size: 20px;
                 font-weight: 500;
             }

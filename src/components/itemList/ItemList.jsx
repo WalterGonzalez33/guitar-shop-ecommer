@@ -1,43 +1,70 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {Data} from '../../data/Data'
 import Cards from '../cards/Cards'
+
+import { getFirestore, getDocs, collection, where, query } from 'firebase/firestore'
+import Loading from '../loading/Loading'
 
 const ItemList = () => {
 
-    const [productData, setProductData] = useState([])
+    const [ data, setData ] = useState([])
+    const [ loading, setLoading ] = useState(true)
 
     const { filterName } = useParams()
 
-    const getData = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if(filterName){
-            const dataFiltrada = Data.filter((product) => {
-              return product.modelo == filterName
-            })
-            resolve(dataFiltrada)
-          }else{
-            resolve(Data)
-          }  
-        } ,0)
-    })
 
+
+    const getData = () => {
+
+      const db = getFirestore();
+
+      const querySnapshot = collection(db, 'Products')
+
+      if(filterName){
+        const queryFilter = query(
+          querySnapshot,
+          where('model', '==', filterName)
+        )
+
+        getDocs(queryFilter)
+        .then((res) => {
+          const data = res.docs.map(( item ) => {
+            return {id: item.id, ...item.data()}
+          })
+
+          setData(data)
+          setLoading(false)
+
+        })
+        .catch(err => console.log(err))
+      }else{
+        getDocs(querySnapshot)
+        .then((res) => {
+          const data = res.docs.map(( item ) => {
+            return {id: item.id, ...item.data()}
+          })
+  
+          setData(data)
+          setLoading(false)
+  
+        })
+        .catch(err => console.log(err))
+      }
+    }
 
     useEffect(() => {
-      getData
-        .then(res => {
-          setProductData(res)
-        })
-        .catch( e => console.log(e))
+      getData()
     } ,[filterName])
+
 
   return (
 
     <div className='container cont-card'>
+      { loading && <Loading/>}
         {
-            productData.map(item => (
-                <Cards key={item.ID} producto={item}/>
+          data &&  data.map(item => (
+                <Cards key={item.id} producto={item}/>
             ))
         }
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const SetQuantity = ({ stock, setState, state }) => {
+const SetQuantity = ({ stock, setState, state, text}) => {
 
     const [ alertMaxCant, setAlertMaxCant] = useState(false)
 
@@ -30,7 +30,7 @@ const SetQuantity = ({ stock, setState, state }) => {
 
         {/* // selecionable de cantidad de elementos para el carrito */}
         {   stock > 0 &&   <div className='cant-product-container'>
-                                        <span className="cantidad-txt">Cantidad: </span>
+                                        {text && <span className="cantidad-txt">Cantidad: </span>}
                                         <div className="selec-cant-item-container">
                                           <button onClick={()=> setCantItem('less')} className="buttom-cant button-plus">-</button>
                                           <div className="cant-item">{ state }</div>
@@ -39,8 +39,8 @@ const SetQuantity = ({ stock, setState, state }) => {
             {/* // alerta de maxima capacida de selecion del producto */}
 
                                         {
-                                          alertMaxCant && <div className="alertMaxCant-container">
-                                                            <span className="text-maxSelect">max stock</span>
+                                          text && alertMaxCant && <div className="alertMaxCant-container">
+                                                            <span className="text-maxSelect">max</span>
                                                           </div>
                                         }
                                     </div>

@@ -10,6 +10,7 @@ const Home = () => {
       </section>
 
       <div className="home">
+        <h3 className="title-carousel">Featured Products</h3>
         <DataCarouselHome/>
       </div>
     </div>
