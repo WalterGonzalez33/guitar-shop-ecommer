@@ -1,7 +1,7 @@
 
 .detail-container{
 
-    background-image: url('../../assets/fondoProducts.jpg');
+    background-image: url('../../assets/fondoHome.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,7 +20,7 @@
         padding: 20px;
 
         background-color: #1818385d;
-        backdrop-filter:blur(18px);
+        backdrop-filter:blur(20px);
     
     
         .itemDetail-container{
@@ -232,6 +232,8 @@
 @media screen and (max-width:1400px){
 
     .detail-container{
+
+        background-image: url('../../assets/fondoProducts.jpg');
 
         .container{
             flex-wrap: nowrap;

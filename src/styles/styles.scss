@@ -18,6 +18,7 @@ $color-header: #1b1b26;  // #1a5454 // #e2ac50 // #5f5f5f // #fff159 // #1b1b26
 $color-card: rgb(226, 226, 226);
 $color-Itemcontainer: #1b1b26;
 $color-text: rgb(229, 229, 229);
+$color-fondos: rgb(15, 17, 29);
 
 // components
 @import './components/home';
@@ -38,6 +39,7 @@ $color-text: rgb(229, 229, 229);
 @import './components/carouselHome';
 @import './components/cartImg';
 @import './components/cartContainer';
+@import './components/footer';
 
 
 

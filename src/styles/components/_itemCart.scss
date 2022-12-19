@@ -1,8 +1,8 @@
 .item-cart{
     width: 100%;
-    max-width: 1000px;
-    height: 60px;
-    background-color: rgb(170, 169, 169) ;
+    height: 120px;
+    max-width: 600px;
+    background-color: rgb(244, 243, 243) ;
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
@@ -15,83 +15,121 @@
         align-items: center;
         justify-content: space-between;
 
-        .item-cart-img-container{
-            margin-right: 1px solid rgba(0, 0, 0, 0.829);
-            cursor: pointer;
+        .data-name-price-container{
 
-            img{
-                width: 50px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            .item-cart-img-container{
                 height: 100%;
-                vertical-align: top;
-                object-fit: cover;
-                background-color: aliceblue;
+                margin-right: 1px solid rgba(0, 0, 0, 0.829);
+                cursor: pointer;
+    
+                img{
+                    width: 80px;
+                    height: 100%;
+                    vertical-align: top;
+                    object-fit: cover;
+                }
+    
             }
+
+            .name-price-container{
+                width: 200px;
+                max-width: 200px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                margin-left: 10px;
+                .item-cart-name-container{
+                    font-family: $font-page;
+                    text-decoration: none;
+                    font-size: 15px;
+                    color: black;
+                    font-weight: 900;
+    
+                }
+
+                .price-container{
+                    font-family: $font-page;
+                    font-size: 18px;
+                    color: rgb(24, 24, 24);
+                    font-weight: 500;
+                }
+                
+            }
+
 
         }
 
-        .link-product{
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
+        .date-quantity-subtotal-container{
 
-            .item-cart-name-container{
-                font-family: $font-page;
-                text-decoration: none;
-                font-size: 15px;
-                color: black;
-                margin-left: 8px;
 
-            }
-        }
-
-        .cant-product-container{
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: space-evenly;
-
-            .cantidad-txt{
-                font-size: 18px;
-                font-family: $font-page;
-                font-weight: 600;
-            }
-
-            .selec-cant-item-container{
-                width: 65px;
-                height: 30px;
-                background-color: rgba(0, 0, 0, 0.2);
-                margin: 8px;
+            .cant-product-container{
                 display: flex;
                 flex-flow: row wrap;
                 align-items: center;
-                justify-content: space-between;
-
-                .buttom-cant{
-                    width: 20px;
-                    height: 100%;
-                    border: none;
-                    background-color: rgba(0, 0, 0, 0.802);
-                    color: aliceblue;
-                    
-                    .button-less{
-                        border-bottom-left-radius: 10px;
-                        border-top-left-radius: 10px;
+                justify-content: space-evenly;
+    
+                .cantidad-txt{
+                    font-size: 18px;
+                    font-family: $font-page;
+                    font-weight: 600;
+                }
+    
+                .selec-cant-item-container{
+                    width: 65px;
+                    height: 30px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    margin: 8px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    .buttom-cant{
+                        width: 20px;
+                        height: 100%;
+                        border: none;
+                        background-color: rgba(0, 0, 0, 0.802);
+                        color: aliceblue;
+                        
+                        .button-less{
+                            border-bottom-left-radius: 10px;
+                            border-top-left-radius: 10px;
+                        }
+                        .button-plus{
+                            border-bottom-right-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
                     }
-                    .button-plus{
-                        border-bottom-right-radius: 10px;
-                        border-top-right-radius: 10px;
+                    .cant-item{
+                        color: aliceblue;
                     }
                 }
-                .cant-item{
-                    color: aliceblue;
+    
+                .alertMaxCant-container{
+                    color: rgb(72, 9, 9);
+                    font-weight: 800;
                 }
             }
 
-            .alertMaxCant-container{
-                color: rgb(72, 9, 9);
+            .quantity-container{
+                width: 100%;
+                font-family: $font-page;
+                font-size: 18px;
+                color: rgb(24, 24, 24);
                 font-weight: 800;
+                text-align: center;
             }
+
         }
+
+
+
+
+        
 
         .item-cart-remove-container{
             cursor: pointer;
@@ -110,5 +148,7 @@
                 }
             }
         }
+
+        
     }
 }

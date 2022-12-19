@@ -61,6 +61,10 @@ const ItemList = () => {
   return (
 
     <div className='container cont-card'>
+
+      <div className="title-product-list-container">
+        <h3 className="title-product-list">{filterName ? filterName : 'All products'}</h3>
+      </div>
       { loading && <Loading/>}
         {
           data &&  data.map(item => (

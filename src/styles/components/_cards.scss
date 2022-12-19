@@ -3,27 +3,37 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #1818385d;
     padding: 10px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
     min-height: 900px;
+
+    .title-product-list-container{
+        width: 100%;
+        color: rgb(230, 229, 229);
+        font-size: 45px;
+        font-family: $font-page;
+        text-align: center;
+        padding: 10px;
+        text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    }
 }
 
 .card-container{
     width: 250px;
     height: 570px;
-    background-color: #55545ef3;
+    background-color: #2a2a2af3;
     padding: 10px;
     border-radius: 13px;
     margin: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     transition: all 1s ease;
     cursor: pointer;
-    box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
+    box-shadow: rgba(152, 152, 152, 0.155) 0px 1px 0px, rgba(142, 142, 148, 0.303) 0px 8px 24px, rgba(119, 119, 126, 0.293) 0px 16px 48px;
 
     &:hover{
-        transition: all 1s ease;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        transition: all .5s ease;
+        box-shadow: rgba(216, 216, 216, 0.56) 0px 22px 70px 4px;
         
     }
 
@@ -117,4 +127,11 @@
         }
     }
 
+}
+
+@media screen and (max-width:1200px) {
+
+    .card-container{
+        box-shadow: rgba(221, 221, 221, 0.1) 0px 8px 24px, rgba(175, 175, 176, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
 }

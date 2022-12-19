@@ -6,8 +6,14 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: sticky;
+
+
+
     .container{
 
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
         
         .list-cart-container{
             width: 100%;
@@ -16,6 +22,45 @@
             flex-flow: column wrap;
             align-items: center;
         }
+
+        .cart-description-container{
+            position: absolute;
+            bottom: 20px;
+            width: 50%;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(241, 0, 0, 0.974);
+            height: 100px;
+            border-radius: 10px;
+            .total-container{
+    
+                span{
+                    font-size: 30px;
+                    color: aliceblue;
+                }
+    
+            }
+            .confirm-compra-container{
+
+                .confirm-compra{
+                    padding: 9px;
+                    border-radius: 10px;
+                    border: 2px solid rgb(0, 0, 0);
+                    background-color: rgb(0, 0, 0);
+                    color: aliceblue;
+                    transition: all .4s ease;
+    
+                    &:hover{
+                        transition: all .4s ease;
+                        color: black;
+                        background-color: aliceblue;
+                    }
+                }
+            }
+        }
         
     }
+
 }

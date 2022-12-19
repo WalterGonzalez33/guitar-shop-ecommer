@@ -7,6 +7,7 @@ import DetailProduct from './pages/detail/DetailProduct';
 import SectionProducts from './pages/sectionProducts/SectionProducts';
 import Cart from './pages/cart/Cart';
 import CartProvider from './context/CartContext';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -21,10 +22,10 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/products' element={<SectionProducts/>}/>
             <Route path='/products/:filterName' element={<SectionProducts/>}/>
-            <Route path='/products/search/:searchElement' element={<SectionProducts/>}/>
             <Route path='/detail/:productId' element={<DetailProduct/>}/>
             <Route path='/cart' element={<Cart/>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
     </div>

@@ -1,6 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../../context/CartContext';
 
-const SetQuantity = ({ stock, setState, state, text}) => {
+const SetQuantity = ({ stock, setState, state, text, product}) => {
+
+    const { cart, setCart } = useContext(CartContext);
+
+    const setQuantityProduct = () => {
+      const newCart = cart.map(( item ) => {
+        if(item.id === product){
+          item.quantity = state
+        }
+        return item
+      })
+
+      setCart(newCart)
+    }
 
     const [ alertMaxCant, setAlertMaxCant] = useState(false)
 
@@ -24,6 +38,10 @@ const SetQuantity = ({ stock, setState, state, text}) => {
           }
         }
     }
+
+    useEffect(() => {
+      setQuantityProduct()
+    },[ state ])
 
   return (
     <div>

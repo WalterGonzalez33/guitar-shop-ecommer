@@ -1,13 +1,11 @@
-import React, { useContext } from 'react'
-import { useEffect } from 'react'
+
 import ItemCart from '../itemCart/ItemCart'
 
-const ViewCart = ({dataProduct}) => {
+const ViewCart = ({dataProduct, state}) => {
 
-  
 
   return (
-    <ItemCart producto={dataProduct}/>
+    <ItemCart producto={dataProduct} state={state}/>
   )
 }
 

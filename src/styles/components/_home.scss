@@ -1,22 +1,95 @@
 .home{
-    background-image: url('../../assets/fondoHome.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: $color-fondos;
+    .section-products-featured{
+        height: 800px;
+        max-height: 800px;
+        padding: 50px;
+        background-image: url('../../assets/fondoHome.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 10%;
+        border-top: 1px solid $color-header;
+        border-bottom: 1px solid whitesmoke;
 
-    .title-carousel{
-        color: rgb(230, 229, 229);
-        font-size: 40px;
-        font-family: $font-page;
-        text-align: center;
-        padding: 10px;
-        text-shadow: rgb(255, 255, 255) 1px 0 10px;
+        &.section-2{
+            border-top-left-radius: 0;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 0;
+            border-top: 1px solid whitesmoke;
+            border-bottom: none;
+        }
+
+    
+        .title-carousel{
+            color: rgb(230, 229, 229);
+            font-size: 39px;
+            font-family: $font-page;
+            text-align: center;
+            padding: 10px;
+            text-shadow: rgb(255, 255, 255) 1px 0 10px;
+        }
     }
+
+    .fondo-home-statick{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+        .guitar-container{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: url('../../assets/guitarraFondo.jpg');
+            background-size: cover;
+            background-position: 80%;
+            margin: 10px;
+            box-shadow: rgba(120, 119, 119, 0.369) 0px 22px 70px 4px;
+        }
+        .text-motive-container{
+            padding: 10px;
+            margin: 10px;
+            width: 700px;
+            .text-motive{
+                font-size: 50px;
+                color: $color-text;
+            }
+        }
+    }
+
 }
 @media screen and (max-width:1200px) {
 
     .home{
-        background-image: url('../../assets/fondoProducts.jpg');
-       
+        .section-products-featured{
+            background-image: url('../../assets/fondoProducts.jpg');
+            border: none;
+
+            &.section-2{
+                border: none;
+            }
+           
+        }
+
+        .fondo-home-statick{
+    
+            .guitar-container{
+                width: 300px;
+                height: 300px;
+
+            }
+            .text-motive-container{
+                .text-motive{
+                    font-size: 45px;
+                    color: $color-text;
+                    text-align: center;
+                }
+            }
+        }
     }
 }

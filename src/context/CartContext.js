@@ -14,7 +14,6 @@ const CartProvider = ({children}) => {
 
     const [ cart, setCart ] = useState([]);
     const [ data, setData ] = useState([]);
-    const [ activeData, setActiveData ] = useState(false);
     const [ searchConten, setSearchConten ] = useState('')
 
 
@@ -44,7 +43,7 @@ const CartProvider = ({children}) => {
     
     const removeToCart = (id) => {
       const removeProduct = cart.filter(product => {
-        return product.ID != id;
+        return product.id != id;
       })
 
       setCart(removeProduct)
@@ -69,10 +68,10 @@ const CartProvider = ({children}) => {
 
     useEffect(() => {
       getData()
-    },[activeData]);
+    },[]);
 
     return(
-        <CartContext.Provider value={{cart,data, setActiveData,setSearchConten,searchConten, addToCart, removeToCart, getElementExist}}>
+        <CartContext.Provider value={{cart,data,setSearchConten,searchConten, setCart, addToCart, removeToCart, getElementExist}}>
             { children }
         </CartContext.Provider>
     )

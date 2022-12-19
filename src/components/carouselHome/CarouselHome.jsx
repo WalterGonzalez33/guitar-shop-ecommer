@@ -30,7 +30,7 @@ const CarouselHome = ({ products }) => {
   // funsion de la vista para dispositivos mas grandes
   const getItemDesk = () => {
     const cardItem = products.map((item, index)=>{
-      return index < 4 ? <Cards key={item.id} producto={item}/> : <></>
+      return index < 4 ? <Cards  producto={item}/> : <></>
     })
     return cardItem
   }

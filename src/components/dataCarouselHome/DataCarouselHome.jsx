@@ -3,31 +3,56 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import CarouselHome from '../carouselHome/CarouselHome'
 import Loading from '../loading/Loading'
+import { getFirestore, getDocs, collection, where, query } from 'firebase/firestore'
 
-import { CartContext } from '../../context/CartContext'
-import { useContext } from 'react'
+const DataCarouselHome = ({ mejores_productos }) => {
 
-const DataCarouselHome = () => {
-
-  const { data } = useContext(CartContext)
 
   const [ dataCarousel , setDataCarousel ] = useState([])
   const [ loading, setLoading ] = useState(true)
 
 
   const getData = () => {
-    
-    if(data){
-      setDataCarousel(data)
-      setLoading(false)
+
+    const db = getFirestore();
+
+    const querySnapshot = collection(db, 'Products')
+
+    if(mejores_productos){
+      const queryFilter = query(
+        querySnapshot,
+        where('price', '>', 2000)
+      )
+
+      getDocs(queryFilter)
+      .then((res) => {
+        const data = res.docs.map(( item ) => {
+          return {id: item.id, ...item.data()}
+        })
+
+        setDataCarousel(data)
+        setLoading(false)
+
+      })
+      .catch(err => console.log(err))
     }else{
-      console.log('no data')
+      getDocs(querySnapshot)
+      .then((res) => {
+        const data = res.docs.map(( item ) => {
+          return {id: item.id, ...item.data()}
+        })
+
+        setDataCarousel(data)
+        setLoading(false)
+
+      })
+      .catch(err => console.log(err))
     }
   }
 
   useEffect(() => {
-    getData()
-  }, [dataCarousel, []])
+    getData();
+  }, [])
 
 
   return (
