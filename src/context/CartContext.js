@@ -23,6 +23,11 @@ const CartProvider = ({children}) => {
         setCart([...cart, {...product, quantity}])
     }
 
+    // borra todos los items del carrito
+    const cleardCart = () => {
+      setCart([])
+    }
+
 
     // esta funcion te debuelve true o false si el elemento esta en el carrito //
 
@@ -71,7 +76,7 @@ const CartProvider = ({children}) => {
     },[]);
 
     return(
-        <CartContext.Provider value={{cart,data,setSearchConten,searchConten, setCart, addToCart, removeToCart, getElementExist}}>
+        <CartContext.Provider value={{cart,data,setSearchConten,searchConten, cleardCart, setCart, addToCart, removeToCart, getElementExist}}>
             { children }
         </CartContext.Provider>
     )

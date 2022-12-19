@@ -1,6 +1,7 @@
 
 .cartWidget-container{
 
+    position: relative;
     cursor: pointer;
     width: 62px;
     height: 62px;
@@ -13,6 +14,28 @@
     &:hover{
         background-color: rgba(0, 0, 0, 0.158);
         border-radius: 50%;
+    }
+
+    .quantity-cart-container{
+
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        color: aliceblue;
+        position: absolute;
+        right: 2px;
+        top: 8px;
+        border-radius: 50%;
+
+        .cart-quantity{
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            text-align: center;
+        }
     }
 
     .svgCart{

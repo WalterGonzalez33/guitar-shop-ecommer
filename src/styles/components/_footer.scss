@@ -52,3 +52,14 @@
         }
     }
 }
+
+@media screen and (max-width:1200px){
+
+    .footer-container{
+
+        .container{
+
+            flex-flow: column wrap;
+        }
+    }
+}
