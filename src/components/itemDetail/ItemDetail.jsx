@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom'
 import SimilarProducts from '../similarProducts/SimilarProducts'
 import Pagos from '../../assets/Pagos.png'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import SetQuantity from '../setQuantity/SetQuantity'
 
@@ -12,6 +12,9 @@ const ItemDetail = ({ product }) => {
  const { getElementExist, addToCart } = useContext(CartContext)
 
  const [ cantProduct, setCantProduct ] = useState(1)
+
+ useEffect(() => {
+ },[])
 
   return (
     <div className="container itemDetail">

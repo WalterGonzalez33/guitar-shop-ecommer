@@ -1,0 +1,22 @@
+
+
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(236, 236, 236);
+    border:1px solid rgb(0, 0, 0) ;
+    border-radius: 10px;
+    padding: 20px;
+
+    svg{
+        font-size: 26px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+}

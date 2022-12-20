@@ -2,37 +2,30 @@ import CartData from "../cartData/CartData"
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import GetForm from '../form/GetForm'
 import cartImg from '../../assets/cart/carrito-de-compras.gif'
-import { useState } from 'react';
+import { useState } from "react";
 
 
 const ViewCart = () => {
 
-  const { cart, cleardCart } = useContext(CartContext);
+  const { cart, cleardCart, total, setTotal } = useContext(CartContext);
 
-  const [ total, setTotal ] = useState(0)
+  const [ formActive, setFormActive ] = useState(false)
 
-  const getTotal = () => {
-
-    setTotal(cart.reduce((acc, item) => {
-      return acc + item.quantity * item.price
-    },0))
-
+  const mostrarForm = () => {
+    setFormActive(true)
   }
 
   useEffect(() => {
-    getTotal()
-    console.log(total)
   },[cart])
 
-  useEffect(() => {
-    getTotal()
-  },[])
-
-
   return (
+
     <div className="cart">
       <div className=' container'>
+
+        {formActive && <GetForm formActive={setFormActive}/>}
 
         <div className="img-cart-container">
           <img className='img-cart' src={cartImg} alt="cart" />
@@ -57,7 +50,7 @@ const ViewCart = () => {
           </div>
 
           <div className="confirm-compra-container">
-            <button className='confirm-compra'>confirm order</button>
+            <button className='confirm-compra' onClick={() =>{mostrarForm()} }>confirm order</button>
           </div>
         </div>
 

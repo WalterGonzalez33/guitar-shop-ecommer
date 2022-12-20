@@ -14,6 +14,7 @@ const CartProvider = ({children}) => {
 
     const [ cart, setCart ] = useState([]);
     const [ data, setData ] = useState([]);
+    const [ total, setTotal ] = useState(0)
     const [ searchConten, setSearchConten ] = useState('')
 
 
@@ -26,6 +27,16 @@ const CartProvider = ({children}) => {
     // borra todos los items del carrito
     const cleardCart = () => {
       setCart([])
+    }
+
+
+    // calcula el totaL del carrito
+    const getTotal = () => {
+
+      setTotal(cart.reduce((acc, item) => {
+        return acc + item.quantity * item.price
+      },0))
+  
     }
 
 
@@ -74,9 +85,12 @@ const CartProvider = ({children}) => {
     useEffect(() => {
       getData()
     },[]);
+    useEffect(() => {
+      getTotal()
+    },[cart])
 
     return(
-        <CartContext.Provider value={{cart,data,setSearchConten,searchConten, cleardCart, setCart, addToCart, removeToCart, getElementExist}}>
+        <CartContext.Provider value={{cart,data,setSearchConten,searchConten,total,setTotal, cleardCart, setCart, addToCart, removeToCart, getElementExist}}>
             { children }
         </CartContext.Provider>
     )
